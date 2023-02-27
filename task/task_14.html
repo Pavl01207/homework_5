@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 14</title>
+</head>
+<body>
+	<style>
+		body {display: flex;  
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 20px;
+			font-size: 20px;
+			background-color: #fdfcdc;
+		}
+		p span { font-weight: 700; color: #9a031e;}
+	</style>
+	<script>
+		/*Каса. Користувачу повідомляють суму, яку йому треба сплатити. Користувач поступово вводить суму грошей до тих пір,
+		поки суми не буде достатньо для оплати товарів (кожного разу користувачу повідомляють, яку ще суму потрібно ввести).*/
+		const price = parseFloat(prompt('Введіть загальну вартість товару','1000'))
+		let userTotalMoney = 0
+		let moreMoney
+		do {
+			let userMoney = parseFloat(prompt('Внесено грошей'))
+			userTotalMoney += userMoney
+			moreMoney = price - userTotalMoney
+			if (moreMoney > 0) alert(`Потрібно ще внести ${moreMoney}`)
+		} while (userTotalMoney <= price)
+		document.write(`<p>Товар оплачено.</p>`)
+	</script>
+</body>
+</html>

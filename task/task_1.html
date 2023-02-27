@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 1</title>
+</head>
+<body>
+	<style>
+		body {display: flex; 
+			flex-direction: column; 
+			align-items: center; 
+			justify-content: center;
+			gap: 10px;
+			font-size: 20px;
+			background-color: #fdfcdc;
+		}
+		p span { font-weight: 700; color: #9a031e;}
+	</style>
+	<script>
+		/*Вивести з використанням циклів маркований список з випадковими числами (1-100).
+		Кількість випадкових чисел вводиться користувачем*/
+		let userNumber = parseInt(prompt('Введіть бажану кількість пунктів(від 1 до 100)','10'))
+		const min = 1
+		const max = 100
+		let num = 1
+		while (num <= userNumber) {
+			document.write(`<p>Пункт №<span>${num}</span> із числом <span>${min + Math.floor(Math.random() * (max - min + 1))}</span></p>`)
+			num++
+		}
+	</script>
+</body>
+</html>

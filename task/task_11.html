@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 11</title>
+</head>
+<body>
+	<style>
+		body {display: flex;  
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 20px;
+			font-size: 20px;
+			background-color: #fdfcdc;
+		}
+		p span { font-weight: 700; color: #9a031e;}
+	</style>
+	<script>
+		//Знайти суму 5 непарних чисел, що знаходяться між заданими користувачем числами.
+		let minNumber = parseInt(prompt('Початкове число','10'))
+		let maxNumber = parseInt(prompt('Кінечне число','100'))
+		//упорядковуємо отримані дані
+		if (minNumber > maxNumber) {
+			const temp = minNumber
+			minNumber = maxNumber
+			maxNumber = temp
+		}
+		//вносимо дані
+		let oddNumbersCounter = 0, totalSummNumbers = 0
+		//перевіряємо чи початкове число є парним
+		let currentNumber
+		if (minNumber + 1 % 2 === 0) currentNumber = minNumber + 2
+		else currentNumber = minNumber + 1
+		//створюємо цикл
+		for (; currentNumber < maxNumber && oddNumbersCounter < 5; currentNumber +=2) {
+			totalSummNumbers += currentNumber
+			oddNumbersCounter++
+		}
+		//виводимо результат
+		document.write(`<p>Сума 5 непарних чисел між <span>${minNumber}</span> та <span>${maxNumber}</span> становить <span>${totalSummNumbers}</span>.</p>`)
+	</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 5</title>
+</head>
+<body>
+	<style>
+		body {display: flex; 
+			flex-direction: column; 
+			align-items: center; 
+			justify-content: center;
+			gap: 10px;
+			font-size: 20px;
+			background-color: #fdfcdc;
+		}
+		span { font-weight: 700; color: #9a031e;}
+		table, td {border: 1px solid #9a031e;}
+		td {padding: 5px;}
+	</style>
+	<script>
+		//Вивести таблицю
+		let number = 1
+		document.write(`<table>`)
+		for(let i = 1; i <= 3; i++){
+		document.write(`<tr>`)
+			for (let j = 1; j <= 3; j++){
+				document.write(`<td><span>${number}</span></td>`)
+				number++
+			}
+		document.write(`</tr>`)
+		}
+		document.write(`</table>`)
+	</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 7</title>
+</head>
+<body>
+	<style>
+		body {display: flex;  
+			gap: 20px;
+			font-size: 20px;
+			background-color: #fdfcdc;
+		}
+		span { font-weight: 700; color: #9a031e;}
+	</style>
+	<script>
+		//Вивести на екран N абзаців (N вводиться користувачем) за зразком.
+		const N = parseInt(prompt('Введіть бажану кількість абзаців','5'))
+		
+		for (let i = 1, j = 1; i <= N && j <= N; i++, j++){
+			document.write(`<div style="text-align:center">`)
+			document.write(`<h1>Заголовок <span>${i}</span></h1>`)
+			for (let count = 1; count <= N; count++) {
+				document.write(`<p>Розділ <span>${j}</span>, параграф <span>${count}<span></p>`)
+			}
+			document.write(`</div>`)
+		}
+	</script>
+</body>
+</html>

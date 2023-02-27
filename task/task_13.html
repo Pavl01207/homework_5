@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 13</title>
+</head>
+<body>
+	<style>
+		body {display: flex;  
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 20px;
+			font-size: 20px;
+			background-color: #fdfcdc;
+		}
+		p span { font-weight: 700; color: #9a031e;}
+	</style>
+	<script>
+		/*Морський бій. Комп’ютер випадково розташовує одиночний корабель на полі розміром N*M.
+		Маючи К снарядів користувач намагається потопити корабель.*/
+		//отримуємо від користувача розміри поля
+		const N = parseInt(prompt('Кількість комірок по горизонталі'))
+		const M = parseInt(prompt('Кількість комірок по вертикалі'))
+		const K = parseInt(prompt('Кількість снарядів'))
+		const compPosX = 1 + Math.floor(Math.random() * N)
+		const compPosY = 1 + Math.floor(Math.random() * M)
+		//створюємо цикл
+		for (let i = 1; i <= K; i++) {
+			const userPosX = parseInt(prompt(`Спроба№${i} Розміщення цілі по горизонталі`))
+			const userPosY = parseInt(prompt(`Спроба№${i} Розміщення цілі по вертикалі`))
+			if (userPosX === compPosX && userPosY === compPosY) document.write(`<p>Ви <span>влучили</span> в корабель!</p>`)
+			else continue
+		}
+	</script>
+</body>
+</html>

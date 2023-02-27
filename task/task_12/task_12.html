@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 12</title>
+</head>
+<body>
+	<style>
+		body {display: flex;  
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 20px;
+			font-size: 20px;
+			background-color: #fdfcdc;
+		}
+		p span { font-weight: 700; color: #9a031e;}
+		table, td {border: 3px solid #000;}
+		td {padding: 5px;}
+	</style>
+	<script>
+		/*Ігровий автомат. Випадково вибираємо зображення у 3 позиціях. Вибір у кожній позиції вибирається як одне з чотирьох зображень. 
+		Вивести ці зображення і повідомити виграш користувача (три перших зображення 100 грн, три других – 200, три третіх – 500, три четвертих зображення – 1000грн). 
+		Використати цикли і switch (для вибору зображення за номером).*/
+		/*
+		let gameStart = confirm('Let\'s play the game!')
+		if (gameStart) {
+			document.write(`<table><tr>`)
+			for (let i = 1; i <= 3; i++) {
+				const randomNumber = 1 + Math.floor(Math.random() * 4)
+				let numberImage 
+		switch (randomNumber) {
+			case 1: numberImage = '<td><img src="image1.png"></td>'	
+				break;
+			case 2: numberImage = '<td><img src="image2.png"></td>'
+				break;
+			case 3: numberImage = '<td><img src="image3.png"></td>'
+				break;
+			case 4: numberImage = '<td><img src="image4.png"></td>'
+				break;
+		}
+				document.write(`${numberImage}`)
+			}
+			document.write(`<table><tr>`)
+		}
+		else document.write(`See you next time!`)
+		*/
+		let boxOne = 1 + Math.floor(Math.random() * 4)
+		let boxTwo = 1 + Math.floor(Math.random() * 4)
+		let boxThree = 1 + Math.floor(Math.random() * 4)
+		let result = 0
+		if (boxOne === 1 && boxTwo === 1 && boxThree === 1) result = 100
+		if (boxOne === 2 && boxTwo === 2 && boxThree === 2) result = 200
+		if (boxOne === 3 && boxTwo === 3 && boxThree === 3) result = 500
+		if (boxOne === 4 && boxTwo === 4 && boxThree === 4) result = 1000
+		//виводимо на екран зоображення
+		switch (boxOne) {
+			case 1: boxOne = '<td><img src="image1.png"></td>'	
+				break;
+			case 2: boxOne = '<td><img src="image2.png"></td>'
+				break;
+			case 3: boxOne = '<td><img src="image3.png"></td>'
+				break;
+			case 4: boxOne = '<td><img src="image4.png"></td>'
+				break;
+		}
+		switch (boxTwo) {
+			case 1: boxTwo = '<td><img src="image1.png"></td>'	
+				break;
+			case 2: boxTwo = '<td><img src="image2.png"></td>'
+				break;
+			case 3: boxTwo = '<td><img src="image3.png"></td>'
+				break;
+			case 4: boxTwo = '<td><img src="image4.png"></td>'
+				break;
+		}
+		switch (boxThree) {
+			case 1: boxThree = '<td><img src="image1.png"></td>'	
+				break;
+			case 2: boxThree = '<td><img src="image2.png"></td>'
+				break;
+			case 3: boxThree = '<td><img src="image3.png"></td>'
+				break;
+			case 4: boxThree = '<td><img src="image4.png"></td>'
+				break;
+		}
+		document.write(`<table><tr>${boxOne}${boxTwo}${boxThree}</tr></table>`)
+	if (result > 0) document.write(`<p>Вітання! Ваш виграш: <span>${result}грн</span>.</p>`)
+	else document.write(`<p>Нажаль, Ви <span>не виграли</span>.</p>`)
+	</script>
+</body>
+</html>
